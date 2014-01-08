@@ -1,0 +1,25 @@
+body{background: #eee !important;}
+.header .brand{padding-left:10px;}
+.interface-page{display: -webkit-box;display: box;position: absolute;top:0px;left:0px;margin:0px;padding-top:42px;-webkit-box-sizing:border-box;width: 100%;height:100%;overflow: hidden;}
+.interface-sidebar-left{float:none;height:100%;background: #3d3d3d;width: 300px;margin-left:-1px;}
+.interface-sidebar-right{float:none;height:100%;background: #3d3d3d;width: 300px;margin-right:-1px;}
+.interface-content{margin:0px;height:100%;overflow: scroll;-webkit-box-flex:1;}
+.interface-content .tools .btn-zoom{position: fixed; bottom:10px;left:50%;margin-left:322px; }
+.interface-content .tools .page-pre{position: fixed; top:50%;left:50%;margin-left:-390px; }
+.interface-content .tools .page-pre a{color:#fff;background: rgba(0,0,0,.2);display: block;width: 50px;height:50px;text-align: center;line-height: 50px;font-size: 20px;}
+.interface-content .tools .page-next{position: fixed; top:50%;;left:50%;margin-left:345px; }
+.interface-content .tools .page-next a{color:#fff;background: rgba(0,0,0,.2);display: block;width: 50px;height:50px;text-align: center;line-height: 50px;font-size: 20px;}
+.interface-content .tools .page-next a:hover,.interface-content .tools .page-pre a:hover{background: rgba(0,0,0,.3);text-decoration: none;}
+.interface-content .other-pages{position: fixed; top:50px;left:50%;margin-left:322px; }
+.preview-area{display:block;width: 640px;margin:0 auto;border-left:#999 dashed 1px;border-right:#999 dashed 1px;position: absolute;left:50%;margin-left:-320px;height:100%;overflow: scroll;background: #fff; }
+
+.setting-box{padding-top:30px;}
+.setting-box .btns{text-align: center;}
+.setting-box .btns .btn{margin:0px 10px;}
+
+.tab-mod .empty{text-align:center; color:#666;margin:10px 0px;}
+.tab-mod .tab-pane{height:500px;overflow: scroll;padding:0px 10px;margin:10px 0px;}
+.tab-mod .text{background: #333;height:2000px;width: 100px;}
+.nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus{background: #ddd}
+
+
