@@ -18,6 +18,7 @@
 	<link href="assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 	<link href="assets/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 	<link href="assets/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="assets/css/jquery.nestable.css" rel="stylesheet" type="text/css"/>
 	<link href="assets/css/interface.css" rel="stylesheet" type="text/css"/>
 	<!-- END GLOBAL MANDATORY STYLES -->
 	<link rel="shortcut icon" href="assets/img/favicon.ico" />
@@ -116,12 +117,90 @@
 
 		<div class="interface-sidebar-right">
 			<h3>文档</h3>
-			<div class="setting-box">
-				<div class="setting-title">基本属性</div>
+			<div class="setting-box box-status">
+				<div class="setting-title">用户操作</div>
 				<div class="setting-body">
-					宽度高度
+					<div class="btn-group" data-toggle="buttons-radio">
+					  <button type="button" class="btn blue btn-default">点击</button>
+					  <button type="button" class="btn blue btn-default">向左滑动</button>
+					  <button type="button" class="btn blue btn-default">向右滑动</button>
+					</div>
+				</div>
+				<div class="tips" contenteditable="true">
+					<p>选择用户操作，在右侧调整该操作下的状态</p>
+					<p>如果是热区的点击，可以在下方选择调整的页面和调整动画</p>
 				</div>
 			</div>
+			<div class="setting-box box-status">
+				<div class="setting-title">切换的页面和动画</div>
+				<div class="select">
+					<label>切换的页面：</label>
+					<div class="btn-group">
+						<a class="btn blue dropdown-toggle" data-toggle="dropdown" href="#">
+						其他页面 <i class="icon-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">页面1</a></li>
+							<li><a href="#">页面2</a></li>
+							<li><a href="#">页面3</a></li>
+							<li><a href="#">页面4</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="select">
+					<label>切换的动画：</label>
+					<div class="btn-group">
+						<a class="btn blue dropdown-toggle" data-toggle="dropdown" href="#">
+						其他页面 <i class="icon-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">页面1</a></li>
+							<li><a href="#">页面2</a></li>
+							<li><a href="#">页面3</a></li>
+							<li><a href="#">页面4</a></li>
+						</ul>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="layout-box">
+				<div class="layout-body">
+					<div class="tabbable tabbable-custom tab-layout">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#tab_2_1" data-toggle="tab">图层顺序</a></li>
+							
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_2_1">
+								<div class="dd" id="layout-sort">
+									<ol class="dd-list" >
+										<li class="dd-item on" data-id="1">
+											<div class="dd-handle"><input value="item 1"></input></div>
+										</li>
+										<li class="dd-item" data-id="1">
+											<div class="dd-handle">Item 1</div>
+										</li>
+										<li class="dd-item" data-id="1">
+											<div class="dd-handle">Item 1</div>
+										</li>
+										<li class="dd-item" data-id="1">
+											<div class="dd-handle">Item 1</div>
+										</li>
+										<li class="dd-item" data-id="1">
+											<div class="dd-handle">Item 1</div>
+										</li>
+
+									</ol>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
 		</div>
 
 	</div>
@@ -129,19 +208,10 @@
 
 		<div class="footer-inner">
 
-			2013 &copy; Metronic by keenthemes.
+			2014 &copy; ISUX
 
 		</div>
 
-		<div class="footer-tools">
-
-			<span class="go-top">
-
-			<i class="icon-angle-up"></i>
-
-			</span>
-
-		</div>
 
 	</div>
 	<script src="assets/js/jquery-1.10.1.min.js" type="text/javascript"></script>
@@ -157,11 +227,17 @@
 	<script src="assets/js/jquery.blockui.min.js" type="text/javascript"></script>  
 	<script src="assets/js/jquery.cookie.min.js" type="text/javascript"></script>
 	<script src="assets/js/jquery.uniform.min.js" type="text/javascript" ></script>
+	<script src="assets/js/jquery.nestable.js" type="text/javascript" ></script>
+	<script src="assets/js/ui-nestable.js" type="text/javascript" ></script>
+	<script src="assets/js/interface.js" type="text/javascript" ></script>
 	<!-- END CORE PLUGINS -->
 	<script src="assets/js/app.js"></script>      
 	<script>
 		jQuery(document).ready(function() {    
 		   App.init();
+		    UINestable.init();
+		    interface.init();
+
 		});
 
 	</script>
