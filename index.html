@@ -1,245 +1,256 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-<!-- BEGIN HEAD -->
+<html lang="cn">
+
 <head>
 	<meta charset="utf-8" />
-	<title>interface</title>
+	<title>easyface</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/style-metro.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
-	<link href="assets/css/uniform.default.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/jquery.nestable.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/interface.css" rel="stylesheet" type="text/css"/>
+	<link href="assets/css/app.css" rel="stylesheet" type="text/css"/>
 	<!-- END GLOBAL MANDATORY STYLES -->
 	<link rel="shortcut icon" href="assets/img/favicon.ico" />
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
-<body class="page-header-fixed page-sidebar-fixed">
-	<!-- BEGIN HEADER -->
-	<div class="header navbar navbar-inverse navbar-fixed-top">
-		<!-- BEGIN TOP NAVIGATION BAR -->
-		<div class="navbar-inner">
-			<div class="container-fluid">
-				<a class="brand" href="index.html">
-				interface
-				</a>
-				<div class="navbar hor-menu">
+<body>
+	<header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+	    <div class="navbar-header">
+	      <a href="../" class="navbar-brand">Interface</a>
+	    </div>
+	    <ul class="toolbar" role="navigation">
+	        <li>
+	          <span class="glyphicon glyphicon-floppy-disk"></span>
+	          保存
+	        </li>
+	        <li>
+	          <span class="glyphicon glyphicon-play"></span>
+	          预览
+	        </li>
+	        
+	    </ul>
+	</header>
+	<section class="mod-pagebar">
+		<div class="title"><h3>页面</h3></div>
+		<div class="page-list">
+		<ul>
+			<li class="on" data-pageid="1">
+				<div class="thumb">
+					<img src="http://placekitten.com/640/960">
 				</div>
-				<ul class="nav pull-right">
-				</ul>
-
-			</div>
-
-		</div>
-
-		<!-- END TOP NAVIGATION BAR -->
-
-	</div>
-
-	<div class="row-fluid interface-page" >
-		<!-- BEGIN HORIZONTAL MENU PAGE SIDEBAR1 -->
-		<div class="interface-sidebar-left">
-			<div class="setting-box">
-				<div class="setting-body">
-					<div class="btns">
-						<a href="#" class="btn blue big"><i class="icon-plus"></i> 新增图层</a>
-						<a href="#" class="btn gray big"><i class="icon-plus"></i> 新增热区</a>
-					</div>
-				</div>
-			</div>
-			<div class="setting-box">
-				<div class="setting-body">
-					<div class="tabbable tabbable-custom tab-mod">
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#tab_1_1" data-toggle="tab">常用组件</a></li>
-							<li class=""><a href="#tab_1_2" data-toggle="tab">收藏组件</a></li>
-						</ul>
-						<div class="tab-content">
-							<div class="tab-pane active" id="tab_1_1">
-								<div class="empty">暂无组件</div>
-
-							</div>
-							<div class="tab-pane" id="tab_1_2">
-								<div class="empty">暂无组件</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<div class="interface-content">
-			<div class="preview-area">
+			</li>
+			<li  data-pageid="2">
 				
-			</div>
-			<div class="tools">
-				<div class="btn-group btn-zoom" data-toggle="buttons-radio">
+				<div class="thumb">
+					<img src="http://placekitten.com/640/960">
+				</div>
+			</li>
+			<li  data-pageid="1">
+				
+				<div class="thumb">
+					<img src="http://placekitten.com/640/960">
+				</div>
+			</li>
+			<li  data-pageid="1">
+				
+				<div class="thumb">
+					<img src="http://placekitten.com/640/960">
+				</div>
+			</li>
+			<li>
+				
+				<div class="thumb">
+					<img src="http://placekitten.com/640/960">
+				</div>
+			</li>
+			<li>
+				
+				<div class="thumb">
+					<img src="http://placekitten.com/640/960">
+				</div>
+			</li>
 
-					<a href="" class="btn blue mini active">50%</a>
+		</ul>
+		</div>
+		<div class="add">
+			<span class="glyphicon glyphicon-plus"></span>
+			新增页面
+		</div>
+		<input id="fileupload" type="file" name="files[]" multiple>
+	</section>
+	<section class="mod-editarea">
+		<div class="webapp-container">
+			<div class="mobile-page" id="mobile-page">
 
-					<a href="" class="btn blue mini">100%</a> 
-
-				</div>
-				<div class="page-pre">
-					<a href="#"><i class="icon-chevron-left"></i></a>
-				</div>
-				<div class="page-next">
-					<a href="#"><i class="icon-chevron-right"></i></a>
-				</div>
-			</div>
-			<div class="other-pages">
-				<div class="btn-group">
-					<a class="btn blue dropdown-toggle" data-toggle="dropdown" href="#">
-					其他页面 <i class="icon-angle-down"></i>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">页面1</a></li>
-						<li><a href="#">页面2</a></li>
-						<li><a href="#">页面3</a></li>
-						<li><a href="#">页面4</a></li>
-					</ul>
-				</div>
 			</div>
 		</div>
-
-		<div class="interface-sidebar-right">
-			<h3>文档</h3>
-			<div class="setting-box box-status">
-				<div class="setting-title">用户操作</div>
-				<div class="setting-body">
-					<div class="btn-group" data-toggle="buttons-radio">
-					  <button type="button" class="btn blue btn-default">点击</button>
-					  <button type="button" class="btn blue btn-default">向左滑动</button>
-					  <button type="button" class="btn blue btn-default">向右滑动</button>
-					</div>
-				</div>
-				<div class="tips" contenteditable="true">
-					<p>选择用户操作，在右侧调整该操作下的状态</p>
-					<p>如果是热区的点击，可以在下方选择调整的页面和调整动画</p>
-				</div>
-			</div>
-			<div class="setting-box box-status">
-				<div class="setting-title">切换的页面和动画</div>
-				<div class="select">
-					<label>切换的页面：</label>
-					<div class="btn-group">
-						<a class="btn blue dropdown-toggle" data-toggle="dropdown" href="#">
-						其他页面 <i class="icon-angle-down"></i>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#">页面1</a></li>
-							<li><a href="#">页面2</a></li>
-							<li><a href="#">页面3</a></li>
-							<li><a href="#">页面4</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="select">
-					<label>切换的动画：</label>
-					<div class="btn-group">
-						<a class="btn blue dropdown-toggle" data-toggle="dropdown" href="#">
-						其他页面 <i class="icon-angle-down"></i>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#">页面1</a></li>
-							<li><a href="#">页面2</a></li>
-							<li><a href="#">页面3</a></li>
-							<li><a href="#">页面4</a></li>
-						</ul>
-					</div>
-				</div>
+	</section>
 
 
-			</div>
-			<div class="layout-box">
-				<div class="layout-body">
-					<div class="tabbable tabbable-custom tab-layout">
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#tab_2_1" data-toggle="tab">图层顺序</a></li>
-							
-						</ul>
-						<div class="tab-content">
-							<div class="tab-pane active" id="tab_2_1">
-								<div class="dd" id="layout-sort">
-									<ol class="dd-list" >
-										<li class="dd-item on" data-id="1">
-											<div class="dd-handle"><input value="item 1"></input></div>
-										</li>
-										<li class="dd-item" data-id="1">
-											<div class="dd-handle">Item 1</div>
-										</li>
-										<li class="dd-item" data-id="1">
-											<div class="dd-handle">Item 1</div>
-										</li>
-										<li class="dd-item" data-id="1">
-											<div class="dd-handle">Item 1</div>
-										</li>
-										<li class="dd-item" data-id="1">
-											<div class="dd-handle">Item 1</div>
-										</li>
-
-									</ol>
-								</div>
-							</div>
-							
+	<div class="modal fade" role="dialog" style="display:;" id="myModal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title">选择页面</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="mod-select mod-page-select">
+	      		<h3>选择需跳转的页面：</h3>
+	      		<ul class="clearfix">
+					<li class="on">
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
 						</div>
-					</div>
-				</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+					<li>
+						
+						<div class="thumb">
+							<img src="http://placekitten.com/640/960">
+						</div>
+					</li>
+				</ul>
+	      	</div>
+	      	<div class="mod-select mod-animate-select">
+	      		<h3>请选择页面切换动画</h3>
+	      		<ul>
+	      			<li class="ani-slideleft on">
+	      				<div class="front">前</div>
+	      				<div class="back">后</div>
+	      			</li>
+	      			<li class="ani-slideright">
+	      				<div class="front">前</div>
+	      				<div class="back">后</div>
+	      			</li>
+	      			<li class="ani-covertop">
+	      				<div class="front">前</div>
+	      				<div class="back">后</div>
+	      			</li>
+	      			<li class="ani-coverbottom">
+	      				<div class="front">前</div>
+	      				<div class="back">后</div>
+	      			</li>
+					<li class="ani-fade">
+	      				<div class="front">前</div>
+	      				<div class="back">后</div>
+	      			</li>
+					<li class="ani-flip">
+	      				<div class="front">前</div>
+	      				<div class="back">后</div>
+	      			</li>
 
-			</div>
-			
-		</div>
-
-	</div>
-	<div class="footer">
-
-		<div class="footer-inner">
-
-			2014 &copy; ISUX
-
-		</div>
-
-
-	</div>
+	      		</ul>
+	      	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="button" class="btn btn-primary">确定</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 	<script src="assets/js/jquery-1.10.1.min.js" type="text/javascript"></script>
-	<script src="assets/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
-	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 	<script src="assets/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script> 
+	<script src="assets/js/jquery.fileupload.js" type="text/javascript"></script> 
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<!--[if lt IE 9]>
-	<script src="assets/js/excanvas.min.js"></script>
-	<script src="assets/js/respond.min.js"></script>  
-	<![endif]-->   
-	<script src="assets/js/jquery.slimscroll.min.js" type="text/javascript"></script>
-	<script src="assets/js/jquery.blockui.min.js" type="text/javascript"></script>  
-	<script src="assets/js/jquery.cookie.min.js" type="text/javascript"></script>
-	<script src="assets/js/jquery.uniform.min.js" type="text/javascript" ></script>
-	<script src="assets/js/jquery.nestable.js" type="text/javascript" ></script>
-	<script src="assets/js/ui-nestable.js" type="text/javascript" ></script>
-	<script src="assets/js/interface.js" type="text/javascript" ></script>
-	<!-- END CORE PLUGINS -->
+	
 	<script src="assets/js/app.js"></script>      
 	<script>
 		jQuery(document).ready(function() {    
 		   App.init();
-		    UINestable.init();
-		    interface.init();
-
+		   // $('#myModal').modal('show')
 		});
-
+$(function () {
+    'use strict';
+    // Change this to the location of your server-side upload handler:
+    $('#fileupload').fileupload({
+        url: 'upload.php?id=111',
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                // $('<p/>').text(file.name).appendTo('#files');
+            });
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+	});
 	</script>
 
 </html>

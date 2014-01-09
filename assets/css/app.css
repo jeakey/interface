@@ -1,0 +1,196 @@
+body{background: #8f969e;}
+ul,li,h1,h2,h3,h4,h5,h6,p{margin:0px;padding:0px;}
+/*头部start*/
+.navbar{padding:10px 0px;}
+.navbar-brand{padding:5px;}
+.navbar-header{width: 200px;}
+.toolbar{color:#999;margin:0px;}
+.toolbar li{display: inline-block;width: 80px;text-align: center;cursor: pointer;margin-top:7px;}
+.toolbar li:hover{color:#fff;}
+.toolbar li .glyphicon{margin-right: 2px;}
+/*头部end*/
+
+/*页面导航 start*/
+.mod-pagebar{background: #e3e7ed;width: 150px;overflow: scroll;position: fixed;height:100%;display:-webkit-box;-webkit-box-orient:vertical;z-index: 99;}
+.mod-pagebar .title{height:80px;background: #ddd;}
+.mod-pagebar .add{height:30px;text-align: center;line-height: 30px;background: #ddd;}
+#fileupload{position: absolute;left:-2000px;}
+.mod-pagebar h3{color:#333;font-size: 14px;text-align: center;margin:0px;line-height: 30px;font-weight: 400;padding-top:50px;}
+.mod-pagebar .page-list{overflow: scroll;-webkit-box-flex:1;padding-right: 10px;}
+.mod-pagebar ul{list-style: none;padding:0px;margin:0px;}
+.mod-pagebar li{list-style: none;padding:0px;margin:0px;padding:10px 0px;cursor: pointer;position: relative;}
+.mod-pagebar li.on{background: #4397dd;}
+.mod-pagebar li:hover{background: #ccc;}
+.mod-pagebar li.on:hover{background: #4397dd;}
+.mod-pagebar li.on .num{color:#fff;}
+.mod-pagebar .thumb{width: 80px;height:142px;margin:0 auto;background: #000;display: -webkit-box;-webkit-box-orient: horizontal;-webkit-box-pack: center;-webkit-box-align: center;}
+.mod-pagebar .thumb img{width: 100%;}
+.mod-pagebar li .num{width: 100%;top:50%;position: absolute;line-height: 20px;height:20px;left:10px;margin-top:-10px;}
+.mod-pagebar add{width: 100%;top:50%;position: absolute;line-height: 20px;height:20px;left:10px;margin-top:-10px;}
+/*页面导航 end*/
+
+
+/*编辑区 start*/
+.mod-editarea{-webkit-box;-webkit-box-orient: horizontal;-webkit-box-pack: center;-webkit-box-align: center;position: absolute;width: 100%;height:100%;padding-top:55px;padding-left: 210px;}
+.webapp-container{background: url(../img/iphone5.png) no-repeat;background-size:100% auto;width:381px;height:798px;margin:0px auto;position: relative;}
+.mobile-page{position: absolute;width: 320px;height:568px;background: #000;top:119px;left:33px;}
+/*编辑区 end*/
+
+/*选择页面 start*/
+.mod-select{margin-bottom:10px;}
+.mod-select h3{font-size: 14px;font-weight: 400;line-height: 24px;}
+.mod-select ul{list-style: none;padding:0px;margin:0px;background: #999;max-height: 308px;overflow: scroll;}
+.mod-select li{list-style: none;padding:0px;margin:0px;margin:5px;cursor: pointer;position: relative;float:left;padding:1px;position: relative;}
+.mod-select li.on{border:1px solid #4397dd;padding:0px;}
+.mod-select li.on:after{width: 20px;height: 20px;line-height: 20px;text-align: center;font-size: 12px;border-radius: 10px;background: #4397dd;color:#fff;content:"\e013";position: absolute;bottom:3px;right:3px;font-family: 'Glyphicons Halflings';-webkit-font-smoothing: antialiased;z-index: 9;}
+
+.mod-page-select .thumb{width: 80px;height:142px;background: #000;display: -webkit-box;-webkit-box-orient: horizontal;-webkit-box-pack: center;-webkit-box-align: center;}
+.mod-page-select li:hover{padding:0px;border:1px solid #4397dd;}
+.mod-page-select .thumb img{width: 100%;}
+
+.mod-animate-select li{width: 40px;height:71px;overflow: hidden;position: relative;}
+.mod-animate-select li .front,.mod-animate-select li .back{background: #fff;width: 40px;height:71px;position: absolute;z-index: 2;left:0px;top:0px;line-height: 71px;text-align: center;}
+.mod-animate-select li .back{background: #000;z-index: 1;color:#fff;}
+/*选择页面 end*/
+/*切换动画 start*/
+[class^="ani-"]{-webkit-perspective: 800px;}
+[class^="ani-"] .front,[class^="ani-"] .back{-webkit-animation-timing-function: ease-in-out;-webkit-animation-duration: 1s;-webkit-animation-iteration-count: infinite;-webkit-animation-delay: 1s;}
+.ani-slideleft .front {
+  -webkit-animation-name: slideoutleft;
+}
+.ani-slideleft .back {
+  -webkit-animation-name: slideinright;
+}
+
+.ani-slideright .front {
+  -webkit-animation-name: slideoutright;
+}
+.ani-slideright .back {
+  -webkit-animation-name: slideinleft;
+}
+
+
+@-webkit-keyframes slideinleft {
+  from {
+    -webkit-transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+  }
+}
+@-webkit-keyframes slideinright {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+  }
+}
+@-webkit-keyframes slideoutleft {
+  from {
+    -webkit-transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideoutright {
+  from {
+    -webkit-transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(100%);
+  }
+}
+.ani-covertop .front {
+	z-index: 0 !important;
+}
+.ani-covertop .back {
+-webkit-transform:translateY(-100%);
+  -webkit-animation-name: coverintop;
+}
+
+.ani-coverbottom .front {
+  z-index: 0 !important;
+}
+.ani-coverbottom .back {
+	-webkit-transform:translateY(100%);
+
+  -webkit-animation-name: coverinbottom;
+}
+
+
+@-webkit-keyframes coverintop {
+  from {
+    -webkit-transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+  }
+}
+@-webkit-keyframes coverinbottom {
+  from {
+    -webkit-transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+  }
+}
+.ani-fade .front {
+	-webkit-animation-name: fadeout;
+}
+.ani-fade .back {
+
+  -webkit-animation-name: fadein;
+}
+
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.ani-flip .front {
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: rotateY(0deg);
+	-webkit-animation-name: flipout;
+}
+.ani-flip .back {
+	-webkit-transform: rotateY(-180deg);
+  -webkit-animation-name: flipin;
+}
+
+
+@-webkit-keyframes flipin {
+  from {
+    -webkit-transform: rotateY(-180deg);
+  }
+  to {
+    -webkit-transform: rotateY(0deg);
+  }
+}
+@-webkit-keyframes flipout {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(180deg);
+  }
+}
+/*切换动画 end*/
+
+
+
